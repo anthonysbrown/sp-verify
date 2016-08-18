@@ -50,19 +50,18 @@ class sp_verify_init{
 					$age = $date = strtotime(''.date("".$_GET['sp_year']."-".$_GET['sp_month']."-".$_GET['sp_day']."").'');
 					$ofage = $date = strtotime(''.date("Y-m-d").' -'.$sp_verify['verify_age'].' years');
 					
-					
+					/*
 					if($age <= $ofage){
 						
 					$pass_age = true;	
 					}else{
 					$pass_age = false;		
 					}
+					*/
 					
 					
 					
-					
-					
-					if($_GET['sp_confirm_age']  == 1 or $pass_age == true){
+					if($_GET['sp_confirm_age']  == 1 ){
 						
 						$time = $sp_verify['over_age_cookie'] * 86400;
 					setcookie("sp_age_check", 1, time()+ $time , "/");	
